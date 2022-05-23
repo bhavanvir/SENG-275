@@ -41,6 +41,7 @@ a)
 
 
 b) She can remove T2, as both T1 and T2 output the same result, which if "FizzBuzz"
+
 c) Test suite minimzation can be used to determine redundant test cases
 
 d)
