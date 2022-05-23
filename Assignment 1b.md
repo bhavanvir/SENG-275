@@ -21,6 +21,7 @@ Q1)
     I16 = {x < 1 and y < 1 and z < 1} (all inputs are invalid)
     
 Q2) 
+
 a)
 
     public class FizzBuzz {
