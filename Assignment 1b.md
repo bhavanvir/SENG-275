@@ -47,10 +47,16 @@ c) Test suite minimzation can be used to determine redundant test cases
 d)
 
     import org.junit.Assert;
+    import org.junit.Before;
     import org.junit.Test;
     
     public class FizzBuzzTest {
-        FizzBuzz f = new FizzBuzz();
+        FizzBuzz f;
+    
+        @Before
+        public void init(){
+            f = new FizzBuzz();
+        }
     
         @Test
         public void integerTest(){
@@ -93,10 +99,16 @@ a)
 b)
 
     import org.junit.Assert;
+    import org.junit.Before;
     import org.junit.Test;
     
     public class RomanNumeralTest {
-        RomanNumeral r = new RomanNumeral();
+        RomanNumeral r;
+    
+        @Before
+        public void init(){
+            r = new RomanNumeral();
+        }
     
         @Test
         public void TestCase01(){
