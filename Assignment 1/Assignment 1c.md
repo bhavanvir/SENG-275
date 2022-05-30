@@ -32,8 +32,8 @@ Condition: it has a tail
 
 Condition: the number of lives left is between [1, 9] inclusive
 
-    On-point: 1
-    Off-point: 0
+    On-point: 1 and 9
+    Off-point: 0 and 10
     In-points: 1 ≤ numberOfLives ≤ 9
     Out-points: numberOfLives < 1 and numberofLives > 9
     
