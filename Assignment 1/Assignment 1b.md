@@ -40,7 +40,7 @@ a)
     }
 
 
-b) She can remove T2, as both T1 and T2 output the same result, which if "FizzBuzz"
+b) She can remove T2, as both T1 and T2 output the same result, which is "FizzBuzz"
 
 c) Redundant test cases can be removed using Equivalence Partitioning
 
@@ -145,7 +145,3 @@ b)
             Assert.assertEquals(actual, expected);
         }
     }
-
-
-    
-
