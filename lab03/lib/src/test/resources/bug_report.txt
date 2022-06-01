@@ -1,0 +1,18 @@
+Title: Plates with 7 characters without spaces or hyphens are validated for vehicles that aren't motorcycles
+Submitter: Bhavanvir Rai
+email address: bhavanvir.r@gmail.com
+
+Summary of bug: When a user enters a 7 character licence plate that doesn't include a space or hyphen for a vehicle that isn't a motorcycle, the plate is validated
+
+Expected behaviour: The plate isn't validated
+
+Actual behaviour: The plate is validated
+
+Steps to Reproduce:
+1. Have a vehicle that is a motorcycle
+2. Enter a 7 character long licence plate, that doesn't include a space or hypen, i.e. "THISPLA"
+3. See that the plate is validated, when it should be rejected
+
+
+Severity: High
+
