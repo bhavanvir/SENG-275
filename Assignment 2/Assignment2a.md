@@ -18,9 +18,10 @@
 
 **3. R: Range**
 - T1: Age of `14`
-- T2: Age of `71`
-- T3: Age of `0`
-- T4: Age of `100`
+- T2: Age of `15`
+- T3: Age of `71`
+- T4: Age of `70`
+- T5: Age of `0`
 
 **4. R: Reference**
 - T1: Requires for the `Uname` to be valid
