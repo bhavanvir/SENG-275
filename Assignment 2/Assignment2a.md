@@ -12,7 +12,8 @@
 - T6: Just `id`
 
 **2. O: Order**
-- T1: Enroll in a `SENG` course without a `ECE` prerequisite 
+- T1: Enroll in a `SENG` course without selecting some `ECE` prerequisites 
+- T2: Enroll in a `SENG` course without selecting all `ECE` prerequisites
 - T2: Enroll in just a `SENG` course
 - T3: Enroll in just a `ECE` course
 
@@ -26,7 +27,6 @@
 **4. R: Reference**
 - T1: Requires for the `Uname` to be valid
 - T2: Requires for the `Pword` to be valid for the `login id` instance
-- T3: Requires for the user information to be queryable in a database
 
 **5. E: Existence**
 - T1: Registering in a course that isn't offered in a term
@@ -46,7 +46,7 @@ Assuming a student is able to take a maximum of 6 courses per term:
 
 **7. T: Time**
 
-Assuming a global clock is implemented:
-- T1: Produce an error if the elapsed time reaches `10 seconds` when trying to access the database
-- T2: Produce an error if the elapsed time querying the database for duplicity reaches `10 seconds`
-- T3: Produce an error if the elapsed time reaches `10 seconds` when the user is trying to connect to the service
+Assuming a global clock is implemented, with E being the maximum time elapseable:
+- T1: Produce an error if the elapsed time reaches `E` when trying to access the database
+- T2: Produce an error if the elapsed time querying the database for duplicity reaches `E`
+- T3: Produce an error if the elapsed time reaches `E` when the user is trying to connect to the service
