@@ -14,10 +14,13 @@
 **2. O: Order**
 - T1: Enroll in a `SENG` course without selecting some `ECE` prerequisites 
 - T2: Enroll in a `SENG` course without selecting all `ECE` prerequisites
-- T2: Enroll in just a `SENG` course
-- T3: Enroll in just a `ECE` course
+- T3: Enroll in a `SENG` course then select an `ECE` prerequisite
+- T4: Enroll in just a `SENG` course
+- T5: Enroll in just a `ECE` course
 
 **3. R: Range**
+
+Assuming only positive integers:
 - T1: Age of `14`
 - T2: Age of `15`
 - T3: Age of `71`
@@ -46,7 +49,7 @@ Assuming a student is able to take a maximum of 6 courses per term:
 
 **7. T: Time**
 
-Assuming a global clock is implemented, with E being the maximum time elapseable:
+Assuming a global clock is implemented, with `E` being the maximum time elapseable without producing an error:
 - T1: Produce an error if the elapsed time reaches `E` when trying to access the database
 - T2: Produce an error if the elapsed time querying the database for duplicity reaches `E`
-- T3: Produce an error if the elapsed time reaches `E` when the user is trying to connect to the service
+- T3: Produce an error if the elapsed time reaches `E` when writing the `email id` to the database
