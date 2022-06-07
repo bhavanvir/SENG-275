@@ -28,6 +28,8 @@ Assuming only positive integers are enterable:
 - T5: Age of `0`
 
 **4. R: Reference**
+
+Assuming a user can only have a single active session:
 - T1: Requires for the `Uname` to be valid
 - T2: Requires for the `Pword` to be valid for the `login id` instance
 
