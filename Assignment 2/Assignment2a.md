@@ -20,7 +20,7 @@
 
 **3. R: Range**
 
-Assuming only positive integers:
+Assuming only positive integers are enterable:
 - T1: Age of `14`
 - T2: Age of `15`
 - T3: Age of `71`
