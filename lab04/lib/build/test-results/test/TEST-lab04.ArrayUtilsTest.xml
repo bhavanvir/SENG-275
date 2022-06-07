@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="lab04.ArrayUtilsTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2022-06-07T22:55:25" hostname="RAI" time="0.076">
+  <properties/>
+  <testcase name="[1] array is null, null, 0, 0, -1" classname="lab04.ArrayUtilsTest" time="0.047"/>
+  <testcase name="[2] value not in array, [1, 5, 7, 3], 6, 0, -1" classname="lab04.ArrayUtilsTest" time="0.001"/>
+  <testcase name="[3] negative start index, [3, 7, 4, 6], 4, -5, 2" classname="lab04.ArrayUtilsTest" time="0.001"/>
+  <testcase name="[4] startValue before valueToFind, [1, 2, 3, 4], 4, 1, 3" classname="lab04.ArrayUtilsTest" time="0.001"/>
+  <testcase name="[5] startIndex exactly valueToFind, [1, 3, 4, 5], 3, 1, 1" classname="lab04.ArrayUtilsTest" time="0.001"/>
+  <testcase name="[6] startIndex after valueToFind, [1, 2, 3, 4, 5], 3, 3, -1" classname="lab04.ArrayUtilsTest" time="0.001"/>
+  <testcase name="[7] startIndex larger than array length, [1, 2], 2, 3, -1" classname="lab04.ArrayUtilsTest" time="0.001"/>
+  <testcase name="[8] index exactly array.length-1, [1, 2, 3], 3, 2, 2" classname="lab04.ArrayUtilsTest" time="0.001"/>
+  <testcase name="[9] index exactly array.length-1, [1, 2, 3], 2, 2, -1" classname="lab04.ArrayUtilsTest" time="0.001"/>
+  <testcase name="[10] multiple occurrences, [1, 2, 3, 2, 2, 2, 2, 2], 2, 0, 1" classname="lab04.ArrayUtilsTest" time="0.001"/>
+  <testcase name="[11] value is the first element, [1, 5, 7, 3], 1, 0, 0" classname="lab04.ArrayUtilsTest" time="0.001"/>
+  <testcase name="[12] value is the first element and index is negative, [1, 5, 7, 3], 1, -10, 0" classname="lab04.ArrayUtilsTest" time="0.001"/>
+  <testcase name="[13] empty array, [], 0, 0, -1" classname="lab04.ArrayUtilsTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
