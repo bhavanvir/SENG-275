@@ -16,13 +16,15 @@
 
 **2. O: Order**
 
+Assuming SENG and ECE courses aren't takeable together in the same term:
+
 | Test Case ID | Test Scenario | Test Steps | Test Data | Expected Results | Actual Results | Pass/Fail | 
 | - | - | - | - | - | - | - |
-| TC01 | Enrolling in a `SENG` course without selecting some `ECE` prerequisites | 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `SENG` course <br> 3. Select a single `ECE` prerequisite | Courses: SENG 275, ECE 458 | Display a message saying all prerequisite for the course must be selected first | As expected | Pass |
-| TC02 | Enrolling in a `SENG` course then selecting all `ECE` prerequisites | 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `SENG` course <br> 3. Select all `ECE` courses | Courses: SENG 321, ECE 260 | Display a message saying all prequisites for the course must be selected first | As expected | Pass |
-| TC03 | Enroll in a `SENG` course then select an `ECE` prequisite | 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `SENG` course <br> 3. Select a single `ECE` prerequisite | Courses: SENG 265, ECE 255 | Display a message saying that the prerequisite must be selected first | As expected | Pass|
-| TC04 | Enroll in only a `SENG` course | 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `SENG` course | Course: SENG 350 | Display a message saying all prequisites for the course must be selected first | As expected | Pass |
-| TC05 | Enroll in only an `ECE` course | 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `ECE` course | Course: ECE 310 | Don't display a message to the user | As expected | Pass |
+| TC01 | Enrolling in a `SENG` course in term 1 without selecting some `ECE` prerequisites for term 2| 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `SENG` course for term 1 <br> 3. Select a single `ECE` prerequisite for term 2 | Course term 1: SENG 275 <br> Course term 2: ECE 458 | Registration fails and a message saying all prerequisite for the course must be selected first is displayed to the user | As expected | Pass |
+| TC02 | Enrolling in a `SENG` course in term 1 then selecting all `ECE` prerequisites in term 2 | 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `SENG` course in term 1 <br> 3. Select all `ECE` prerequisite courses in term 2 | Courses term 1: SENG 321 <br> Courses term 2: ECE 260, ECE 310 | Registration is successful without error | As expected | Pass |
+| TC03 | Enroll in a `SENG` and `ECE` course in the same term | 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `SENG` course for term 1 <br> 3. Select a single `ECE` prerequisite for term 1 | Course term 1: SENG 265, ECE 255 | Registration is successful without error | As expected | Pass|
+| TC04 | Enroll in only a `SENG` course in term 1 | 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `SENG` course | Course term 1: SENG 350 | Registration fails and a message saying all prerequisite for the course must be selected first is displayed to the user | As expected | Pass |
+| TC05 | Enroll in only an `ECE` prerequisite course for both terms | 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `ECE` course for term 1 and term 2| Course term 1: ECE 310 <br> Course term 2: ECE 242 | Registration is successful without error | As expected | Pass |
 
 **3. R: Range**
 
@@ -55,17 +57,14 @@ Assuming a user can only have a single active session:
 
 **6. C: Cardinality**
 
-Assuming a student is able to take a maximum of 6 courses per term:
-
 | Test Case ID | Test Scenario | Test Steps | Test Data | Expected Results | Actual Results | Pass/Fail | 
 | - | - | - | - | - | - | - |
-| TC01 | Producing a message when there are `0` courses in the list | 1. Go to site www.uvic.ca/registration_page <br> 2. Select no courses | N/A | Prompt the user that at least one course has to be selected | As expected | Pass |
-| TC02 | Producing a message when there's only `1` course with no prerequisites in the list | 1. Go to site www.uvic.ca/registration_page <br> 2. Select any course with no prerequisites | Course: SENG 265 | Don't prompt the user anything | As expected | Pass |
-| TC03 | Producing a message when there aren't yet `6` courses in the list | 1. Go to site www.uvic.ca/registration_page <br> 2. Select any course | Courses: ECE 355 | Display the selected list of courses to the user | As expected | Pass |
-| TC04 | Adding a course when there are `0` courses in the list | 1. Go to site www.uvic.ca/registration_page <br> 2. Select any course | Course: SENG 499 |  Course is added to the list | As expected | Pass |
-| TC05 | Adding a course when there's only `1` course in the list | 1. Go to site www.uvic.ca/registration_page <br> 2. Select any course | Course: ECE 255 | Course is added to the list | As expected | Pass |
-| TC06 | Adding a course when there aren't yet `6` courses in the list | 1. Go to site www.uvic.ca/registration_page <br> 2. Select any course | Course: SENG 426 | Course is added to the list | As expected | Pass |
-| TC07 | Adding a course when there are already `6` courses in the list | 1. Go to site www.uvic.ca/registration_page <br> 2. Select any course | Course: SENG 499 | Prompt the user that more than 6 courses can't be taken together in a single term | As expected | Pass |
+| TC01 | Student selects no courses | 1. Go to site www.uvic.ca/registration_page <br> 2. Select no courses | N/A | Prompt the user that at least one course has to be selected | As expected | Pass |
+| TC02 | Student selects a single `ECE` course | 1. Go to site www.uvic.ca/registration_page <br> 2. Select any course with no prerequisites | Course: ECE 310 | Registration is successful without error | As expected | Pass |
+| TC03 | Student selects a `SENG` course that has a single `ECE` prerequisite | 1. Go to site www.uvic.ca/registration_page <br> 2. Select any `SENG` course | Courses: SENG 321 | Prompt the user that the selected course requires a prequisite | As expected | Pass |
+| TC04 | Student selects all `ECE` prequisites before selecting a `SENG` course | 1. Go to site www.uvic.ca/registration_page <br> 2. Select all `ECE` prerequisite courses <br> 3. Select a single `SENG` course | Courses: ECE 211, ECE 242, SENG 499 | Registration is successful without error| As expected | Pass |
+| TC05 | Student selects more than one `ECE` courses | 1. Go to site www.uvic.ca/registration_page <br> 2. Select two `ECE` courses | Course: ECE 255, ECE 355 | Registration is successfull without error | As expected | Pass |
+| TC06 | Student selects more than one `SENG` courses | 1. Go to site www.uvic.ca/registration_page <br> 2. Select two `SENG` courses | Course: SENG 426, SENG 499 | Prompt the user that the selected courses require prequisites | As expected | Pass |
 
 **7. T: Time**
 
