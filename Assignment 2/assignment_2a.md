@@ -21,10 +21,10 @@ Assuming SENG and ECE courses aren't takeable together in the same term:
 | Test Case ID | Test Scenario | Test Steps | Test Data | Expected Results | Actual Results | Pass/Fail | 
 | - | - | - | - | - | - | - |
 | TC01 | Enrolling in a `SENG` course in term 1 without selecting some `ECE` prerequisites for term 2| 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `SENG` course for term 1 <br> 3. Select a single `ECE` prerequisite for term 2 | Course term 1: SENG 275 <br> Course term 2: ECE 458 | Registration fails and a message saying all prerequisite for the course must be selected first is displayed to the user | As expected | Pass |
-| TC02 | Enrolling in a `SENG` course in term 1 then selecting all `ECE` prerequisites in term 2 | 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `SENG` course in term 1 <br> 3. Select all `ECE` prerequisite courses in term 2 | Courses term 1: SENG 321 <br> Courses term 2: ECE 260, ECE 310 | Registration is successful without error | As expected | Pass |
-| TC03 | Enroll in a `SENG` and `ECE` course in the same term | 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `SENG` course for term 1 <br> 3. Select a single `ECE` prerequisite for term 1 | Course term 1: SENG 265, ECE 255 | Registration is successful without error | As expected | Pass|
+| TC02 | Enrolling in a `SENG` course in term 1 then selecting all `ECE` prerequisites in term 2 | 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `SENG` course in term 1 <br> 3. Select all `ECE` prerequisite courses in term 2 | Course term 1: SENG 321 <br> Courses term 2: ECE 260, ECE 310 | Registration is successful without error | As expected | Pass |
+| TC03 | Enroll in a `SENG` and `ECE` course in the same term | 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `SENG` course for term 1 <br> 3. Select a single `ECE` prerequisite for term 1 | Course term 1: SENG 265, ECE 255 | Registration fails and a message saying all prerequisite for the course must be selected first is displayed to the user | As expected | Pass|
 | TC04 | Enroll in only a `SENG` course in term 1 | 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `SENG` course | Course term 1: SENG 350 | Registration fails and a message saying all prerequisite for the course must be selected first is displayed to the user | As expected | Pass |
-| TC05 | Enroll in only an `ECE` prerequisite course for both terms | 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `ECE` course for term 1 and term 2| Course term 1: ECE 310 <br> Course term 2: ECE 242 | Registration is successful without error | As expected | Pass |
+| TC05 | Enroll in only an `ECE` prerequisite course for both terms | 1. Go to site www.uvic.ca/registration_page <br> 2. Select a single `ECE` course for term 1 and term 2 | Course term 1: ECE 310 <br> Course term 2: ECE 242 | Registration is successful without error | As expected | Pass |
 
 **3. R: Range**
 
@@ -33,9 +33,9 @@ Assuming only whole numbers are enterable:
 | Test Case ID | Test Scenario | Test Steps | Test Data | Expected Results | Actual Results | Pass/Fail | 
 | - | - | - | - | - | - | - |
 | TC01 | Enter an `Age` of less than `15` | 1. Go to site www.uvic.ca/registration_page <br> 2. Enter an `Age` of less than `15` in the `Age` input box | Age: 14 | Prompt the user that their age is invalid | As expected | Pass |
-| TC02 | Enter an `Age` of `15` | 1. Go to site www.uvic.ca/registration_page <br> 2. Enter an `Age` of `15` in the `Age` input box | Age: 15 | Don't prompt the user anything | As expected | Pass |
+| TC02 | Enter an `Age` of `15` | 1. Go to site www.uvic.ca/registration_page <br> 2. Enter an `Age` of `15` in the `Age` input box | Age: 15 | Age is accepted without error | As expected | Pass |
 | TC03 | Enter an `Age` of greater than `70` | 1. Go to site www.uvic.ca/registration_page <br> 2. Enter an `Age` of greater than `70` in the `Age` input box | Age: 71 | Prompt the user that their age is invalid | As expected | Pass |
-| TC04 | Enter an `Age` of `70` | 1. Go to site www.uvic.ca/registration_page <br> 2. Enter an `Age` of `70` in the `Age` input box | Age: 70 | Don't prompt the user anything | As expected | Pass |
+| TC04 | Enter an `Age` of `70` | 1. Go to site www.uvic.ca/registration_page <br> 2. Enter an `Age` of `70` in the `Age` input box | Age: 70 | Age is accepted without error | As expected | Pass |
 | TC05 | Enter an `Age` of `0` | 1. Go to site www.uvic.ca/registration_page <br> 2. Enter an `Age` of `0` in the `Age` input box | Age: 0 | Prompt the user that their age is invalid | As expected | Pass |
 
 **4. R: Reference**
@@ -45,7 +45,7 @@ Assuming a user can only have a single active session:
 | Test Case ID | Test Scenario | Test Steps | Test Data | Expected Results | Actual Results | Pass/Fail | 
 | - | - | - | - | - | - | - |
 | TC01 | Entering a `Uname` and `Pword` that is not recognized by the database| 1. Go to site www.uvic.ca/login <br> 2. Enter invalid `Uname` and `Pword` | Uname: brai <br> Pword: IncorrectPword456| Prompt the user that either their `Uname` or `Pword` credentials are in | As expected | Pass |
-| TC02 | Entering a `Pword` and `Uname` that is recognized by the database | 1. Go to site www.uvic.ca/login <br> 2. Enter a valid `Uname` and `Pword`  | Uname: brai <br> Pword: ValidPword123| Don't prompt the user anything | As expected | Pass |
+| TC02 | Entering a `Pword` and `Uname` that is recognized by the database | 1. Go to site www.uvic.ca/login <br> 2. Enter a valid `Uname` and `Pword`  | Uname: brai <br> Pword: ValidPword123| Uname and Pword combination are accepted without error| As expected | Pass |
 
 **5. E: Existence**
 
@@ -63,7 +63,7 @@ Assuming a user can only have a single active session:
 | TC02 | Student selects a single `ECE` course | 1. Go to site www.uvic.ca/registration_page <br> 2. Select any course with no prerequisites | Course: ECE 310 | Registration is successful without error | As expected | Pass |
 | TC03 | Student selects a `SENG` course that has a single `ECE` prerequisite | 1. Go to site www.uvic.ca/registration_page <br> 2. Select any `SENG` course | Courses: SENG 321 | Prompt the user that the selected course requires a prequisite | As expected | Pass |
 | TC04 | Student selects all `ECE` prequisites before selecting a `SENG` course | 1. Go to site www.uvic.ca/registration_page <br> 2. Select all `ECE` prerequisite courses <br> 3. Select a single `SENG` course | Courses: ECE 211, ECE 242, SENG 499 | Registration is successful without error| As expected | Pass |
-| TC05 | Student selects more than one `ECE` courses | 1. Go to site www.uvic.ca/registration_page <br> 2. Select two `ECE` courses | Course: ECE 255, ECE 355 | Registration is successfull without error | As expected | Pass |
+| TC05 | Student selects more than one `ECE` courses | 1. Go to site www.uvic.ca/registration_page <br> 2. Select two `ECE` courses | Course: ECE 255, ECE 355 | Registration is successful without error | As expected | Pass |
 | TC06 | Student selects more than one `SENG` courses | 1. Go to site www.uvic.ca/registration_page <br> 2. Select two `SENG` courses | Course: SENG 426, SENG 499 | Prompt the user that the selected courses require prequisites | As expected | Pass |
 
 **7. T: Time**
