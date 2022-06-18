@@ -7,6 +7,8 @@ a)
 ![image](https://user-images.githubusercontent.com/20825496/172967033-b076ed8e-5d3b-4d9c-bc9b-c7ed37e02895.png)
 
 b)
+![image](https://user-images.githubusercontent.com/20825496/174452257-667f449e-984e-4459-955d-96bc6f2267aa.png)
+
 | Node | Action | 
 | - | - |
 | 1 | User enters a parking space ID |
