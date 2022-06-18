@@ -15,6 +15,13 @@ b)
 | 2 | User selects a method of payment | 
 | 3 | User selects a method of payment that is invalid the first time and thus is given a chance to select a new method of payment | 
 | 4 | User selects a valid method of payment | 
-| 5 | User completes the payment and saves the payment information | 
-| 6 | User completes the payment and doesn't save the payment information | 
-| 7 | User receives a payment receipt to their emaill | 
+| 5 | User saves the payment information | 
+| 6 | User doesn't save the payment information | 
+| 7 | User completes the payment and receives a payment receipt to their email | 
+
+c)
+| Path | 1-2-4-5-7 | 1-2-4-6-7 | 1-2-3-2-4-5-7 | 1-2-3-2-4-6-7 |
+| - | - | - | - | - |
+| Initial Conditions | Parking space ID is valid | Parking space ID is valid | Parking space ID is valid | Parking space ID is valid |
+| Test Steps | 1. User enters a parking space ID <br> 2. User selects a valid method of payment <br> 3. User saves the payment information <br> 4. User completes the payment | 1. User enters a parking space ID <br> 2. User selects a valid method of payment <br> 3. User doesn't save the payment information <br> 4. User completes the payment | 1. User enters a parking space ID <br> 2. User selects an invalid method of payment <br> 3. User selects a valid method of payment <br> 4. User saves the payment information <br> 5. User completes the payment |  1. User enters a parking space ID <br> 2. User selects an invalid method of payment <br> 3. User selects a valid method of payment <br> 4. User doesn't save the payment information <br> 5. User completes the payment |
+| Expected Results | User receives a payment receipt to their email | User receives a payment receipt to their email | User receives a payment receipt to their email | User receives a payment receipt to their email
