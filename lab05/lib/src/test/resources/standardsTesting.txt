@@ -1,0 +1,32 @@
+Which standards tool did you use?
+
+Google Lighthouse on the Chrome Browser.
+
+
+
+Name any ONE TEST that passed, and describe why that test is important, in your own words.
+What would be the problem if the test had failed?
+
+Passed TEST: Avoids requesting the geolocation permission on page load.
+
+This is important, as users are sometimes mistrustful or confused by sites that request their
+location without context, so tying the request to a user action gives the user control over
+their privacy.
+
+If the test failed, it may have turned the user away from wanting to use certain features
+of the website requiring geolocation tracking, and can potentially have the website operator
+liable to legal consequences, since geolocation data would be taken without user consent.
+
+
+
+Name any ONE TEST that failed (yellow or red) and explain why the failed test suggest
+there's a problem with the website.  Who is it a problem for?  What kinds of obstacles
+could this issue present?
+
+Failed TEST: Avoid an excessive DOM size - 1,703 elements. A large DOM will increase memory usage, cause
+longer style calculations, and produce costly layout reflows.
+
+This is a problem for every user type, since a large DOM tree can slow down page performance in multiple
+ways, including: network efficiency and load performance, runtime performance, and memory performance.
+This issue can force users to wait an amount of time proportional to the depth of the DOM tree; larger
+the DOM tree, the more time a user will have to wait for a page or element to be loaded on the webpage.

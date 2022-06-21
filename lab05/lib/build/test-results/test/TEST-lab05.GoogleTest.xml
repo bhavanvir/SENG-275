@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="lab05.GoogleTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-06-21T21:30:55" hostname="RAI" time="15.003">
+  <properties/>
+  <testcase name="googleSearchBoxAppears()" classname="lab05.GoogleTest" time="2.855"/>
+  <testcase name="googleSearchTermAppears()" classname="lab05.GoogleTest" time="2.367"/>
+  <testcase name="googleSearchResultsAppear()" classname="lab05.GoogleTest" time="4.14"/>
+  <testcase name="googlePageLoads()" classname="lab05.GoogleTest" time="3.342"/>
+  <testcase name="googleSearchButtonAppears()" classname="lab05.GoogleTest" time="2.299"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 103.0.5060.24 (e47b049c438cd0a74dc95a011fceb27db18cb080-refs/branch-heads/5060@{#232}) on port 45320
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun. 21, 2022 2:30:56 P.M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 103.0.5060.24 (e47b049c438cd0a74dc95a011fceb27db18cb080-refs/branch-heads/5060@{#232}) on port 30554
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun. 21, 2022 2:30:59 P.M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 103.0.5060.24 (e47b049c438cd0a74dc95a011fceb27db18cb080-refs/branch-heads/5060@{#232}) on port 17415
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun. 21, 2022 2:31:01 P.M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 103.0.5060.24 (e47b049c438cd0a74dc95a011fceb27db18cb080-refs/branch-heads/5060@{#232}) on port 38813
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun. 21, 2022 2:31:05 P.M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 103.0.5060.24 (e47b049c438cd0a74dc95a011fceb27db18cb080-refs/branch-heads/5060@{#232}) on port 28220
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Jun. 21, 2022 2:31:09 P.M. org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
