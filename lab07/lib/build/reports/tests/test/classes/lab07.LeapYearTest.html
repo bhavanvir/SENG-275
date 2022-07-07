@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - LeapYearTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>LeapYearTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/lab07.html">lab07</a> &gt; LeapYearTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">5</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.653s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">invalidLeapYear</td>
+<td class="success">0.055s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">invalidLeapYearException</td>
+<td class="success">0.073s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">invalidLeapYearWith100And400</td>
+<td class="success">0.172s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">validLeapYearWith400</td>
+<td class="success">0.284s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">validLeapYearWithOnly4</td>
+<td class="success">0.069s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>timestamp = 2022-07-06T19:01:26.036080, LeapYearTest:invalidLeapYearWith100And400 = 
+                              |--------------------jqwik--------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 0          | # of all combined edge cases
+edge-cases#tried = 0          | # of edge cases tried in current run
+seed = 1454827237415470712    | random seed to reproduce generated values
+
+
+timestamp = 2022-07-06T19:01:26.320833, LeapYearTest:validLeapYearWith400 = 
+                              |--------------------jqwik--------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 0          | # of all combined edge cases
+edge-cases#tried = 0          | # of edge cases tried in current run
+seed = -6215267076725942578   | random seed to reproduce generated values
+
+
+timestamp = 2022-07-06T19:01:26.394633600, LeapYearTest:invalidLeapYearException = 
+                              |--------------------jqwik--------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 5          | # of all combined edge cases
+edge-cases#tried = 5          | # of edge cases tried in current run
+seed = -206677747917141721    | random seed to reproduce generated values
+
+
+timestamp = 2022-07-06T19:01:26.450484500, LeapYearTest:invalidLeapYear = 
+                              |--------------------jqwik--------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 4          | # of all combined edge cases
+edge-cases#tried = 4          | # of edge cases tried in current run
+seed = 5175048330472446255    | random seed to reproduce generated values
+
+
+timestamp = 2022-07-06T19:01:26.520298700, LeapYearTest:validLeapYearWithOnly4 = 
+                              |--------------------jqwik--------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 0          | # of all combined edge cases
+edge-cases#tried = 0          | # of edge cases tried in current run
+seed = 3325775467248529864    | random seed to reproduce generated values
+
+
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.3.3</a> at Jul. 6, 2022, 7:01:27 p.m.</p>
+</div>
+</div>
+</body>
+</html>

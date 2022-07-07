@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="lab07.LeapYearTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-07-07T02:01:25" hostname="RAI" time="0.655">
+  <properties/>
+  <testcase name="invalidLeapYearWith100And400" classname="lab07.LeapYearTest" time="0.172"/>
+  <testcase name="validLeapYearWith400" classname="lab07.LeapYearTest" time="0.284"/>
+  <testcase name="invalidLeapYearException" classname="lab07.LeapYearTest" time="0.073"/>
+  <testcase name="invalidLeapYear" classname="lab07.LeapYearTest" time="0.055"/>
+  <testcase name="validLeapYearWithOnly4" classname="lab07.LeapYearTest" time="0.069"/>
+  <system-out><![CDATA[timestamp = 2022-07-06T19:01:26.036080, LeapYearTest:invalidLeapYearWith100And400 = 
+                              |--------------------jqwik--------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 0          | # of all combined edge cases
+edge-cases#tried = 0          | # of edge cases tried in current run
+seed = 1454827237415470712    | random seed to reproduce generated values
+
+
+timestamp = 2022-07-06T19:01:26.320833, LeapYearTest:validLeapYearWith400 = 
+                              |--------------------jqwik--------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 0          | # of all combined edge cases
+edge-cases#tried = 0          | # of edge cases tried in current run
+seed = -6215267076725942578   | random seed to reproduce generated values
+
+
+timestamp = 2022-07-06T19:01:26.394633600, LeapYearTest:invalidLeapYearException = 
+                              |--------------------jqwik--------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 5          | # of all combined edge cases
+edge-cases#tried = 5          | # of edge cases tried in current run
+seed = -206677747917141721    | random seed to reproduce generated values
+
+
+timestamp = 2022-07-06T19:01:26.450484500, LeapYearTest:invalidLeapYear = 
+                              |--------------------jqwik--------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 4          | # of all combined edge cases
+edge-cases#tried = 4          | # of edge cases tried in current run
+seed = 5175048330472446255    | random seed to reproduce generated values
+
+
+timestamp = 2022-07-06T19:01:26.520298700, LeapYearTest:validLeapYearWithOnly4 = 
+                              |--------------------jqwik--------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 0          | # of all combined edge cases
+edge-cases#tried = 0          | # of edge cases tried in current run
+seed = 3325775467248529864    | random seed to reproduce generated values
+
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

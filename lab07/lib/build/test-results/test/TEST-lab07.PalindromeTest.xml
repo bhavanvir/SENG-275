@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="lab07.PalindromeTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-07-07T02:01:26" hostname="RAI" time="0.569">
+  <properties/>
+  <testcase name="stringReversed" classname="lab07.PalindromeTest" time="0.168"/>
+  <testcase name="stringEmpty" classname="lab07.PalindromeTest" time="0.05"/>
+  <testcase name="stringUpperCase" classname="lab07.PalindromeTest" time="0.067"/>
+  <testcase name="stringCharacterReversed" classname="lab07.PalindromeTest" time="0.08"/>
+  <testcase name="stringUnique" classname="lab07.PalindromeTest" time="0.203"/>
+  <system-out><![CDATA[timestamp = 2022-07-06T19:01:26.687868300, PalindromeTest:stringReversed = 
+                              |--------------------jqwik--------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 5          | # of all combined edge cases
+edge-cases#tried = 5          | # of edge cases tried in current run
+seed = -5333061000325153537   | random seed to reproduce generated values
+
+
+timestamp = 2022-07-06T19:01:26.738732700, PalindromeTest:stringEmpty = 
+                              |--------------------jqwik--------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 0          | # of all combined edge cases
+edge-cases#tried = 0          | # of edge cases tried in current run
+seed = -6380603889658335476   | random seed to reproduce generated values
+
+
+timestamp = 2022-07-06T19:01:26.805066100, PalindromeTest:stringUpperCase = 
+                              |--------------------jqwik--------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 6          | # of all combined edge cases
+edge-cases#tried = 6          | # of edge cases tried in current run
+seed = 6776085103553436661    | random seed to reproduce generated values
+
+
+timestamp = 2022-07-06T19:01:26.885359600, PalindromeTest:stringCharacterReversed = 
+                              |--------------------jqwik--------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 20         | # of all combined edge cases
+edge-cases#tried = 20         | # of edge cases tried in current run
+seed = 2989684783545465149    | random seed to reproduce generated values
+
+
+timestamp = 2022-07-06T19:01:27.089811700, PalindromeTest:stringUnique = 
+                              |--------------------jqwik--------------------
+tries = 1000                  | # of calls to property
+checks = 1000                 | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = PREVIOUS_SEED | use the previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 0          | # of all combined edge cases
+edge-cases#tried = 0          | # of edge cases tried in current run
+seed = 2749152953629355716    | random seed to reproduce generated values
+
+
+]]></system-out>
+  <system-err><![CDATA[Jul. 06, 2022 7:01:26 P.M. net.jqwik.engine.execution.CheckedProperty maybeWarnOnMultipleTriesWithoutForallParameters
+WARNING: Running Property [PalindromeTest:stringEmpty] in container [lab07.PalindromeTest] without any @ForAll parameters for 1000 tries.
+    Maybe you want to change it into an @Example?
+]]></system-err>
+</testsuite>
