@@ -890,7 +890,12 @@ public class AddEditRemoveFromCart {
     }
 }
 ```
+Execution screenshot for pass/fail: <br>
+| ![image](https://user-images.githubusercontent.com/20825496/178133572-2e6bb68e-78a4-4d78-a4d8-59713d79932d.png) |
+| :--: |
+| *Add-Edit-Remove from cart* |
 
+Execution screenshots of the web application:
 |  |
 | :--: |
 | *TC_ARC_001* |
