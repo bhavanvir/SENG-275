@@ -891,51 +891,51 @@ public class AddEditRemoveFromCart {
 }
 ```
 Execution screenshot for pass/fail: <br>
-| ![image](https://user-images.githubusercontent.com/20825496/178133572-2e6bb68e-78a4-4d78-a4d8-59713d79932d.png) |
+| ![image](https://user-images.githubusercontent.com/20825496/178133959-4619935b-17fb-47c3-9753-23c10a74374e.png) |
 | :--: |
 | *Add-Edit-Remove from cart* |
 
 Execution screenshots of the web application:
-|  |
+| ![image](https://user-images.githubusercontent.com/20825496/178133961-cc381571-a616-468b-a946-35258ce00fa4.png) |
 | :--: |
 | *TC_ARC_001* |
 
-|  |
+| ![image](https://user-images.githubusercontent.com/20825496/178133964-db50cee0-3e3f-4bf0-9521-60dfafa801a5.png) |
 | :--: |
 | *TC_ARC_002* |
 
-|  |
+| ![image](https://user-images.githubusercontent.com/20825496/178133966-e8e4c564-a14f-464b-885e-0d272709a92e.png) |
 | :--: |
 | *TC_ARC_003* |
 
-|  |
+| ![image](https://user-images.githubusercontent.com/20825496/178133968-d850bb72-0d04-4008-be09-6b3f358d8c64.png) |
 | :--: |
 | *TC_ARC_004* |
 
-|  |
+| ![image](https://user-images.githubusercontent.com/20825496/178133976-a07f1b69-2d30-4ae4-bb07-86ca70762230.png) |
 | :--: |
 | *TC_ARC_005* |
 
-|  |
+| ![image](https://user-images.githubusercontent.com/20825496/178133982-f05a814e-c080-4cf7-883c-cbcecfbe21f0.png) |
 | :--: |
 | *TC_ARC_006* |
 
-|  |
+| ![image](https://user-images.githubusercontent.com/20825496/178133992-78dd7709-b57f-4676-8e33-322aca1edccc.png) |
 | :--: |
 | *TC_ARC_007* |
 
-|  |
+| ![image](https://user-images.githubusercontent.com/20825496/178133995-48914260-41c0-4471-991d-fee3e36d3d0f.png) |
 | :--: |
 | *TC_ARC_008* |
 
-|  |
+| ![image](https://user-images.githubusercontent.com/20825496/178134001-713e2429-e622-4644-aacd-63c317a45db7.png) |
 | :--: |
 | *TC_ARC_009* |
 
-|  |
+| ![image](https://user-images.githubusercontent.com/20825496/178134004-d3411fed-3722-4f75-ab52-f2d4490aeeee.png) |
 | :--: |
 | *TC_ARC_010* |
 
-|  |
+| ![image](https://user-images.githubusercontent.com/20825496/178134011-58abedf9-80cd-48e0-8742-dd14c13c720c.png) |
 | :--: |
 | *TC_ARC_011* |
