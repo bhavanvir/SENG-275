@@ -2,7 +2,7 @@
 #### SENG 275 Assignment 1b
 
 Functionality: Create Account <br>
-Description: Users are able to register for an entirely new account, if they don't already have one, by inputting user specific information.
+Description: Users are able to register for an entirely new account, if they don't already have one, by inputting user specific information <br>
 Test Cases: 
 1. TC_CA_001 - createAccountValid
 2. TC_CA_002 - invalidPassword
@@ -11,6 +11,8 @@ Test Cases:
 
 Selenium test automation code:
 ```
+package lab05;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -209,7 +211,7 @@ Execution screenshots of the web application:
 | *TC_CA_004* |
 
 Functionality: Login Functionality <br>
-Description: Users are able to login to an existing account.
+Description: Users are able to login to an existing account <br>
 Test Cases: 
 1. TC_LF_001 - ValidCredentials
 2. TC_LF_002 - InvalidCredentials
@@ -226,6 +228,8 @@ Test Cases:
 
 Selenium test automation code:
 ```
+package lab05;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -465,50 +469,468 @@ Execution screenshot for pass/fail: <br>
 | *Login Functionality* |
 
 Execution screenshots of the web application:
-|  |
+| ![image](https://user-images.githubusercontent.com/20825496/178133611-e29480e9-9338-4834-8ab9-dcba147ca2d5.png) |
 | :--: |
 | *TC_LF_001* |
 
-|  |
+| ![image](https://user-images.githubusercontent.com/20825496/178133615-bfad75bf-ee06-447a-8880-9c3e7b4ec269.png) |
 | :--: |
-| *TC_CA_002* |
+| *TC_LF_002* |
+
+| ![image](https://user-images.githubusercontent.com/20825496/178133621-59328752-2caf-4613-9896-3154a2316b30.png) |
+| :--: |
+| *TC_LF_003* |
+
+| ![image](https://user-images.githubusercontent.com/20825496/178133628-85176415-93f3-4359-ac52-171b9ed39cf0.png) |
+| :--: |
+| *TC_LF_004* |
+
+| ![image](https://user-images.githubusercontent.com/20825496/178133635-c6686e32-fc4e-4c72-a4a1-d2aebea9dba5.png) |
+| :--: |
+| *TC_LF_005* |
+
+| ![image](https://user-images.githubusercontent.com/20825496/178133646-e04210f4-1a6e-4b39-b21c-c356f6130ed9.png) |
+| :--: |
+| *TC_LF_006* |
+
+| ![image](https://user-images.githubusercontent.com/20825496/178133650-dac700ba-650b-46cd-b4ed-c7034bf3964a.png) |
+| :--: |
+| *TC_LF_007* |
+
+| ![image](https://user-images.githubusercontent.com/20825496/178133655-e2279d7c-c6d1-4c87-ba40-cf73ad41f6fc.png) |
+| :--: |
+| *TC_LF_008* |
+
+| ![image](https://user-images.githubusercontent.com/20825496/178133663-17e22f81-dcb4-473d-abb6-b16327c7475b.png) |
+| :--: |
+| *TC_LF_009* |
+
+| ![image](https://user-images.githubusercontent.com/20825496/178133668-309a5144-b4d6-4a8c-9451-b653e03a840d.png) |
+| :--: |
+| *TC_LF_010* |
+
+| ![image](https://user-images.githubusercontent.com/20825496/178133670-785e3147-f4ed-4a7a-82b2-8f06820c1a8e.png) |
+| :--: |
+| *TC_LF_011* |
+
+| ![image](https://user-images.githubusercontent.com/20825496/178133674-fedc1aeb-5e98-4b52-abab-2ff39d369260.png) |
+| :--: |
+| *TC_LF_012* |
+
+Functionality: Add-Edit-Remove from cart <br>
+Description: Users are able to add, edit or remove items that are in their cart <br>
+Test Cases: 
+1. TC_ARC_001 - AddFromHome
+2. TC_ARC_002 - AddFromWomen
+3. TC_ARC_003 - AddFromDresses
+4. TC_ARC_004 - AddFromTShirt
+5. TC_ARC_005 - FromWishlist
+6. TC_ARC_006 - RemoveFromCart
+7. TC_ARC_007 - IncreaseQuantity
+8. TC_ARC_008 - EditSize
+9. TC_ARC_009 - LogOUTAndInCart
+10. TC_ARC_010 - LogOutCart
+11. TC_ARC_011 - LogOutRemoveCart
+
+Selenium test automation code:
+```
+package lab05;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+public class AddEditRemoveFromCart {
+    WebDriver browser;
+
+    @BeforeEach
+    public void setUp() {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\bhava\\Desktop\\chromedriver.exe");
+        browser = new ChromeDriver();
+        browser.manage().window().maximize();
+
+        browser.get("http://automationpractice.com/index.php?controller=authentication");
+
+        WebElement emailAddressInput = browser.findElement(By.id("email"));
+        emailAddressInput.sendKeys("0e7d9_1657320851@uvic.ca");
+
+        WebElement passwordInput = browser.findElement(By.id("passwd"));
+        passwordInput.sendKeys("password");
+
+        WebElement signInButton = browser.findElement(By.id("SubmitLogin"));
+        signInButton.click();
+    }
+
+    @AfterEach
+    public void cleanUp() {
+        browser.quit();
+    }
+
+    @Test
+    public void AddFromDresses(){
+        WebElement dressesButton = browser.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[2]/a"));
+        dressesButton.click();
+
+        JavascriptExecutor js = (JavascriptExecutor) browser;
+        js.executeScript("window.scrollBy(0,500)");
+
+        Actions action = new Actions(browser);
+        action.moveToElement(browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[1]/div/div[1]/div/a[1]/img"))).perform();
+
+        WebElement addToCartButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[1]/div/div[2]/div[2]/a[1]/span"));
+        addToCartButton.click();
+
+        WebElement proceedToCheckoutButton = browser.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span"));
+        new WebDriverWait(browser, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span")));
+        proceedToCheckoutButton.click();
+
+        assertEquals("Order - My Store", browser.getTitle());
+    }
+
+    @Test
+    public void AddFromHome(){
+        WebElement homeButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/ul/li/a/span"));
+        homeButton.click();
+
+        JavascriptExecutor js = (JavascriptExecutor) browser;
+        js.executeScript("window.scrollBy(0,500)");
+
+        Actions action = new Actions(browser);
+        action.moveToElement(browser.findElement(By.xpath("/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[3]/div/div[1]/div/a[1]/img"))).perform();
+
+        WebElement addToCartButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[2]/div/div[1]/ul[1]/li[3]/div/div[2]/div[2]/a[1]/span"));
+        addToCartButton.click();
+
+        WebElement proceedToCheckoutButton = browser.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span"));
+        new WebDriverWait(browser, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span")));
+        proceedToCheckoutButton.click();
+
+        assertEquals("Order - My Store", browser.getTitle());
+    }
+
+    @Test
+    public void AddFromTShirt(){
+        WebElement tShirtsButton = browser.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[6]/ul/li[3]/a"));
+        tShirtsButton.click();
+
+        JavascriptExecutor js = (JavascriptExecutor) browser;
+        js.executeScript("window.scrollBy(0,500)");
+
+        Actions action = new Actions(browser);
+        action.moveToElement(browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li/div/div[1]/div/a[1]/img"))).perform();
+
+        WebElement addToCartButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li/div/div[2]/div[2]/a[1]/span"));
+        addToCartButton.click();
+
+        WebElement proceedToCheckoutButton = browser.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span"));
+        new WebDriverWait(browser, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span")));
+        proceedToCheckoutButton.click();
+
+        assertEquals("Order - My Store", browser.getTitle());
+    }
+
+    @Test
+    public void AddFromWomen(){
+        JavascriptExecutor js = (JavascriptExecutor) browser;
+        js.executeScript("window.scrollBy(0,500)");
+
+        WebElement categoriesButton = browser.findElement(By.partialLinkText("Women"));
+        categoriesButton.click();
+
+        js.executeScript("window.scrollBy(0,500)");
+
+        Actions action = new Actions(browser);
+        action.moveToElement(browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[3]/div/div[1]/div/a[1]/img"))).perform();
+
+        WebElement addToCartButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[3]/div/div[2]/div[2]/a[1]/span"));
+        addToCartButton.click();
+
+        WebElement proceedToCheckoutButton = browser.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span"));
+        new WebDriverWait(browser, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span")));
+        proceedToCheckoutButton.click();
+
+        assertEquals("Order - My Store", browser.getTitle());
+    }
+
+    @Test
+    public void EditSize(){
+        JavascriptExecutor js = (JavascriptExecutor) browser;
+        js.executeScript("window.scrollBy(0,500)");
+
+        WebElement categoriesButton = browser.findElement(By.partialLinkText("Women"));
+        categoriesButton.click();
+
+        js.executeScript("window.scrollBy(0,500)");
+
+        Actions action = new Actions(browser);
+        action.moveToElement(browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[3]/div/div[1]/div/a[1]/img"))).perform();
+
+        WebElement addToCartButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[3]/div/div[2]/div[2]/a[1]/span"));
+        addToCartButton.click();
+
+        WebElement proceedToCheckoutButton = browser.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span"));
+        new WebDriverWait(browser, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span")));
+        proceedToCheckoutButton.click();
+
+        assertTrue(browser.getPageSource().contains("Color : Orange, Size : S"));
+    }
+
+    @Test
+    public void FromWishlist(){
+        JavascriptExecutor js = (JavascriptExecutor) browser;
+        js.executeScript("window.scrollBy(0,500)");
+
+        WebElement categoriesButton = browser.findElement(By.partialLinkText("Women"));
+        categoriesButton.click();
+
+        js.executeScript("window.scrollBy(0,500)");
+
+        Actions action = new Actions(browser);
+        action.moveToElement(browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[3]/div/div[1]/div/a[1]/img"))).perform();
+
+        WebElement moreButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[3]/div/div[2]/div[2]/a[2]/span"));
+        moreButton.click();
+
+        WebElement addToWishListButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div/div[4]/form/div/div[3]/p/a"));
+        addToWishListButton.click();
+
+        browser.navigate().back();
+        browser.navigate().back();
+
+        WebElement wishListButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div[2]/ul/li/a/span"));
+        wishListButton.click();
+
+        WebElement myWishList = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/div/div[1]/table/tbody/tr/td[1]/a"));
+        myWishList.click();
+
+        browser.get("http://automationpractice.com/index.php?token=DC2EAF441578FD39&fc=module&module=blockwishlist&controller=view");
+
+        WebElement viewButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/div/div/ul/li/div/div[2]/div/div/div/a/span"));
+        viewButton.click();
+
+        WebElement addToCartButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div/div[4]/form/div/div[3]/div[1]/p/button/span"));
+        addToCartButton.click();
+
+        WebElement proceedToCheckoutButton = browser.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span"));
+        new WebDriverWait(browser, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span")));
+        proceedToCheckoutButton.click();
+
+        assertEquals("Order - My Store", browser.getTitle());
+    }
+
+    @Test
+    public void IncreaseQuantity(){
+        JavascriptExecutor js = (JavascriptExecutor) browser;
+        js.executeScript("window.scrollBy(0,500)");
+
+        WebElement categoriesButton = browser.findElement(By.partialLinkText("Women"));
+        categoriesButton.click();
+
+        js.executeScript("window.scrollBy(0,500)");
+
+        Actions action = new Actions(browser);
+        action.moveToElement(browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[3]/div/div[1]/div/a[1]/img"))).perform();
+
+        WebElement moreButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[3]/div/div[2]/div[2]/a[2]/span"));
+        moreButton.click();
+
+        WebElement increaseQuanitity = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div/div[4]/form/div/div[2]/p[1]/a[2]/span/i"));
+        increaseQuanitity.click();
+
+        WebElement addToCartButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div/div[4]/form/div/div[3]/div[1]/p/button/span"));
+        addToCartButton.click();
+
+        WebElement proceedToCheckoutButton = browser.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span"));
+        new WebDriverWait(browser, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span")));
+        proceedToCheckoutButton.click();
+
+        assertTrue(browser.getPageSource().contains("2 Products"));
+    }
+
+    @Test
+    public void LogOUTAndInCart(){
+        JavascriptExecutor js = (JavascriptExecutor) browser;
+        js.executeScript("window.scrollBy(0,500)");
+
+        WebElement categoriesButton = browser.findElement(By.partialLinkText("Women"));
+        categoriesButton.click();
+
+        js.executeScript("window.scrollBy(0,500)");
+
+        Actions action = new Actions(browser);
+        action.moveToElement(browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[3]/div/div[1]/div/a[1]/img"))).perform();
+
+        WebElement moreButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[3]/div/div[2]/div[2]/a[2]/span"));
+        moreButton.click();
+
+        WebElement addToCartButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div/div[4]/form/div/div[3]/div[1]/p/button/span"));
+        addToCartButton.click();
+
+        WebElement proceedToCheckoutButton = browser.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span"));
+        new WebDriverWait(browser, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span")));
+        proceedToCheckoutButton.click();
+
+        WebElement signOutButton = browser.findElement(By.partialLinkText("Sign out"));
+        signOutButton.click();
+
+        WebElement signInButton1 = browser.findElement(By.partialLinkText("Sign in"));
+        signInButton1.click();
+
+        WebElement emailAddressInput = browser.findElement(By.id("email"));
+        emailAddressInput.sendKeys("0e7d9_1657320851@uvic.ca");
+
+        WebElement passwordInput = browser.findElement(By.id("passwd"));
+        passwordInput.sendKeys("password");
+
+        WebElement signInButton2 = browser.findElement(By.id("SubmitLogin"));
+        signInButton2.click();
+
+        WebElement cartButton = browser.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[3]/div/a"));
+        cartButton.click();
+
+        assertTrue(browser.getPageSource().contains("Your shopping cart is empty."));
+    }
+
+    @Test
+    public void LogOutCart(){
+        WebElement signOutButton = browser.findElement(By.partialLinkText("Sign out"));
+        signOutButton.click();
+
+        JavascriptExecutor js = (JavascriptExecutor) browser;
+        js.executeScript("window.scrollBy(0,500)");
+
+        WebElement categoriesButton = browser.findElement(By.partialLinkText("Women"));
+        categoriesButton.click();
+
+        js.executeScript("window.scrollBy(0,500)");
+
+        Actions action = new Actions(browser);
+        action.moveToElement(browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[3]/div/div[1]/div/a[1]/img"))).perform();
+
+        WebElement moreButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[3]/div/div[2]/div[2]/a[2]/span"));
+        moreButton.click();
+
+        WebElement addToCartButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div/div[4]/form/div/div[3]/div[1]/p/button/span"));
+        addToCartButton.click();
+
+        WebElement proceedToCheckoutButton = browser.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span"));
+        new WebDriverWait(browser, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span")));
+        proceedToCheckoutButton.click();
+
+        assertTrue(browser.getPageSource().contains("1 Product"));
+    }
+
+    @Test
+    public void LogOutRemoveCart(){
+        WebElement signOutButton = browser.findElement(By.partialLinkText("Sign out"));
+        signOutButton.click();
+
+        JavascriptExecutor js = (JavascriptExecutor) browser;
+        js.executeScript("window.scrollBy(0,500)");
+
+        WebElement categoriesButton = browser.findElement(By.partialLinkText("Women"));
+        categoriesButton.click();
+
+        js.executeScript("window.scrollBy(0,500)");
+
+        Actions action = new Actions(browser);
+        action.moveToElement(browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[3]/div/div[1]/div/a[1]/img"))).perform();
+
+        WebElement moreButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[3]/div/div[2]/div[2]/a[2]/span"));
+        moreButton.click();
+
+        WebElement addToCartButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div/div/div[4]/form/div/div[3]/div[1]/p/button/span"));
+        addToCartButton.click();
+
+        WebElement proceedToCheckoutButton = browser.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span"));
+        new WebDriverWait(browser, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span")));
+        proceedToCheckoutButton.click();
+
+        WebElement deleteItemButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div[2]/table/tbody/tr/td[7]/div/a/i"));
+        deleteItemButton.click();
+
+        assertTrue(browser.getPageSource().contains("Your shopping cart is empty."));
+    }
+
+    @Test
+    public void RemoveFromCart(){
+        JavascriptExecutor js = (JavascriptExecutor) browser;
+        js.executeScript("window.scrollBy(0,500)");
+
+        WebElement categoriesButton = browser.findElement(By.partialLinkText("Women"));
+        categoriesButton.click();
+
+        js.executeScript("window.scrollBy(0,500)");
+
+        Actions action = new Actions(browser);
+        action.moveToElement(browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[3]/div/div[1]/div/a[1]/img"))).perform();
+
+        WebElement addToCartButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div[2]/ul/li[3]/div/div[2]/div[2]/a[1]/span"));
+        addToCartButton.click();
+
+        WebElement proceedToCheckoutButton = browser.findElement(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span"));
+        new WebDriverWait(browser, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[4]/a/span")));
+        proceedToCheckoutButton.click();
+
+        WebElement deleteItemButton = browser.findElement(By.xpath("/html/body/div/div[2]/div/div[3]/div/div[2]/table/tbody/tr/td[7]/div/a/i"));
+        deleteItemButton.click();
+
+        assertTrue(browser.getPageSource().contains("Your shopping cart is empty."));
+    }
+}
+```
 
 |  |
 | :--: |
-| *TC_CA_003* |
+| *TC_ARC_001* |
 
 |  |
 | :--: |
-| *TC_CA_004* |
+| *TC_ARC_002* |
 
 |  |
 | :--: |
-| *TC_CA_005* |
+| *TC_ARC_003* |
 
 |  |
 | :--: |
-| *TC_CA_006* |
+| *TC_ARC_004* |
 
 |  |
 | :--: |
-| *TC_CA_007* |
+| *TC_ARC_005* |
 
 |  |
 | :--: |
-| *TC_CA_008* |
+| *TC_ARC_006* |
 
 |  |
 | :--: |
-| *TC_CA_009* |
+| *TC_ARC_007* |
 
 |  |
 | :--: |
-| *TC_CA_010* |
+| *TC_ARC_008* |
 
 |  |
 | :--: |
-| *TC_CA_011* |
+| *TC_ARC_009* |
 
 |  |
 | :--: |
-| *TC_CA_012* |
+| *TC_ARC_010* |
+
+|  |
+| :--: |
+| *TC_ARC_011* |
