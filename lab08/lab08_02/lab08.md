@@ -1,5 +1,5 @@
 # Bhavanvir Rai
-#### SENG 275 Assignment 2b
+#### SENG 275 Lab 8
 
 **Console output for practice GET request:** `https://pokeapi.co/api/v2/pokemon/snorlax`
 ```
