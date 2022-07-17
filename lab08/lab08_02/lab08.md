@@ -1,5 +1,5 @@
 # Bhavanvir Rai
-#### SENG 275 Lab 8
+#### SENG 275 Lab 08
 
 **Console output for practice GET request:** `https://pokeapi.co/api/v2/pokemon/snorlax`
 ```
@@ -88,5 +88,57 @@ TC05: using GET request: `https://pokeapi.co/api/v2/pokemon/snorlax/encounters`
 ```
 pm.test("Response time is less than 200ms", () => {
   pm.expect(pm.response.responseTime).to.be.below(200);
+});
+```
+<br>
+
+**Tests for creating, patching, and deleting a resource:**
+
+TC_POST: using POST request: `https://jsonplaceholder.typicode.com/posts`
+```
+pm.test("Response body contains", () => {
+  const responseJson = pm.response.json();
+  pm.expect(responseJson.title).to.eql("foo");
+  pm.expect(responseJson.body).to.eql("bar");
+  pm.expect(responseJson.userID).to.eql(1);
+  pm.expect(responseJson.id).to.eql(101);
+});
+```
+Body:
+```
+{
+    "title": "foo",
+    "body": "bar",
+    "userID": 1
+}
+```
+<br>
+
+TC_PATCH: using PATCH request: `https://jsonplaceholder.typicode.com/posts/1`
+```
+pm.test("Response body contains", () => {
+  const responseJson = pm.response.json();
+  pm.expect(responseJson.title).to.eql("Lorem ipsum");
+  pm.expect(responseJson.body).to.eql("Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.");
+  pm.expect(responseJson.userId).to.eql(2);
+  pm.expect(responseJson.id).to.eql(2);
+});
+```
+Body:
+```
+{
+    "userId": 2,
+    "id": 2,
+    "title": "Lorem ipsum",
+    "body": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+}
+```
+<br>
+
+TC_DELETE: using DELETE request: `https://jsonplaceholder.typicode.com/posts/1`
+```
+pm.test("Empty response body", () => {
+    var responseJson = pm.response.json();
+    pm.expect(responseJson).to.not.be.undefined;
 });
 ```
