@@ -1,5 +1,5 @@
 # Bhavanvir Rai
-#### SENG 275 Assignment 1b
+#### SENG 275 Assignment 3
 
 Functionality: Create Account <br>
 Description: Users are able to register for an entirely new account, if they don't already have one, by inputting user specific information <br>
